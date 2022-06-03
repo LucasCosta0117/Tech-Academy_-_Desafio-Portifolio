@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Poppins', 'Arial', Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+.altLang{
+    min-height: 10vh;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 10px;
+}
+.infoHome{
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#presentation{    
+    min-height: 100vh;
+    background-image: url(../images/Background6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+}
+#presentation h1{
+    display: block;
+    width: fit-content;
+    font-size: 6rem;
+    position: relative;
+    color: white;
+}
+#presentation .altLang .cta2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    margin: 2px;
+    padding: 10px; 
+    color: black;
+    background-color: transparent;
+    border: solid black 1px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+#presentation .infoHome .cta{
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 25px 0;  
+    color: #FB5607;
+    background-color: black;
+    border: solid #FB5607 2px;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+}
+#presentation .altLang .cta2:hover{
+    font-weight: 600;
+    background-color: #f4a261;
+    border: none;
+}
+#presentation .infoHome .cta:hover{
+    font-weight: 200;
+    color: black;
+    background-color: #FB5607;
+}
+

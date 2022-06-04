@@ -32,6 +32,7 @@ a{
     justify-content: center;
 }
 
+/*SECTION OF PRESENTATION*/
 #presentation{    
     min-height: 100vh;
     background-image: url(../images/Background6.png);
@@ -39,13 +40,43 @@ a{
     background-repeat: no-repeat;
     background-position: top center;
     position: relative;
+    z-index: 1;
 }
 #presentation h1{
     display: block;
     width: fit-content;
     font-size: 6rem;
     position: relative;
-    color: white;
+    color: transparent;
+    animation: text_review 0.5s ease forwards;
+}
+#presentation h1:nth-child(1){
+    animation-delay: 1.5s;
+}
+#presentation h1:nth-child(2){
+    animation-delay: 2.5s;
+}
+#presentation h1:nth-child(3){
+    animation: text_review_name 0.5s ease forwards;
+    animation-delay: 3.5s;
+}
+#presentation h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;    
+    animation: text_review_box 1s ease;    
+    background-color: #FB5607;
+}
+#presentation h1:nth-child(1) span{
+    animation-delay: 1s;
+}
+#presentation h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+#presentation h1:nth-child(3) span{
+    animation-delay: 3s;
 }
 #presentation .altLang .cta2{
     display: flex;
@@ -68,7 +99,7 @@ a{
     background-color: black;
     border: solid #FB5607 2px;
     font-size: 3rem;
-    letter-spacing: .2rem;
+    letter-spacing: .2rem;  
 }
 #presentation .altLang .cta2:hover{
     font-weight: 600;
@@ -80,4 +111,41 @@ a{
     color: black;
     background-color: #FB5607;
 }
+#presentation::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -1;
+}
 
+/*SECTION OF PROFILE*/
+
+
+/*SECTION OF KEYFRAMES PRESENTAION*/
+@keyframes text_review_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_review{
+    100%{
+        color: white;
+        text-shadow: 0.5px 0.5px black;
+    }
+}
+@keyframes text_review_name{
+    100%{
+        color: #FB5607;        
+        text-shadow: 1px 1px black;
+    }
+}

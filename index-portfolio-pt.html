@@ -11,7 +11,7 @@
     <body>
         <section id="presentation">
             <div class="presentation altLang">
-                <a href="body" type="button" class="cta2">Pt-br</a>
+                <a href="#presentation" type="button" class="cta2">Pt-br</a>
                 <a href="#" type="button" class="cta2">En</a>
             </div>
 
@@ -20,34 +20,37 @@
                     <h1>Olá,<span></span></h1>
                     <h1>meu nome é<span></span></h1>
                     <h1>Lucas Costa<span></span></h1>
-                    <a href="#" type="button" class="cta">MEU PERFIL</a>
+                    <a href="#navMenu" type="button" class="cta">MEU PERFIL</a>
                 </div>
             </div>
         </section>
+        <!--NAVEGATION FOR SECTIONS-->
+        <nav id="navMenu">
+            <ul>    
+                <li><a href="#about">Quem sou?</a></li>
+                <li><a href="#inspiration">Inspirações</a></li>
+                <li><a href="#music">Músicas</a></li>
+                <li><a href="#movies">Filmes/Séries</a></li>
+                <li><a href="#socialMedia">Mídias Sociais</a></li>
+            </ul>
+        </nav>
         <!--MAIN CONTENT AND SECTIONS-->
-        <main id="profile">
-            <!--NAVEGATION FOR SECTIONS-->
-            <nav>
-                <p>Quem sou?</p>
-                <p>Inspirações</p>
-                <p>Músicas</p>
-                <p>Filmes/Séries</p>
-                <p>Mídias Sociais</p>
-            </nav>
+        <main id="profile">            
             <!--SECTION OF ABOUT ME-->
-            <section id="about">
-                <header class="myProfile about header">
-                    <h2 class="section-Tiltle"> Quem sou?</h2>                    
+            <section id="about" class="profile-section">
+                <header>
+                    <h2> Quem sou?</h2>                    
                 </header>
-                <article class="about-item">
-                    <div class="about-info">
+                <article>
+                    <div class="info">
                         <h3>Lucas Costa</h3>
-                        <
+                        <h4>Futuro Desenvolvedor Júnior</h4>
+                        <p><strong>Lucas da Silva Costa</strong>, </p>
                     </div>
                 </article>
             </section>
             <!--SECTION OF INSPIRATION-->
-            <section class="profile-section">
+            <section id="inspiration" class="profile-section">
                 <header>
                     <h2>Inspirações</h2>
                 </header>
@@ -113,7 +116,7 @@
                 </article>
             </section>
             <!--SECTION OF MUSIC-->
-            <section class="profile-section">
+            <section id="music" class="profile-section">
                 <header>
                     <h2>Músicas</h2>
                 </header>
@@ -129,7 +132,7 @@
                             música clássica, blues, folk, soul, R&B, gospel e pop.</p>
                         <a href="https://www.youtube.com/watch?v=L5jI9I03q8E&ab_channel=drMandinga" target="_blank">Ouça agora</a>
                     </div>
-                    <div class="img">
+                    <div class="images">
                         <img src="./src/images/nina-simone1.jpg" alt="Nina Simone, cantora afro-americana">
                     </div>
                 </article>
@@ -171,7 +174,7 @@
                 </article>
             </section>
             <!--SECTION OF MOVIES-->
-            <section class="profile-section">
+            <section id="movies" class="profile-section">
                 <header>
                     <h2>Filmes/Séries</h2>
                 </header>
@@ -226,25 +229,25 @@
                     </div>
                 </article>
             </section>
+            <!--SECTION OF SOCIAL MEDIA-->
+            <section id="socialMedia">
+                <header>
+                    <h2>Mídias Sociais</h2>
+                    <p>Você pode me encontrar nas redes abaixo!</p>
+                </header>
+                <div class="contact item">
+                    <img src="./src/images/mail-icon.png" alt="email">
+                    <p>Email: lucas.costa0117@gmail.com</p>                
+                </div>
+                <div class="contact item">
+                    <img src="./src/images/github-icon.png" alt="github">
+                    <p><a href="https://github.com/LucasCosta0117" target="_blank">GitHub: github.com/LucasCosta0117</a></p>                
+                </div>
+                <div class="contact item">
+                    <img src="./src/images/linkedin-icon.png" alt="linkedin">
+                    <p><a href="https://www.linkedin.com/in/lucas-costa-5a14a8239/" target="_blank">Linkedin: linkedin.com/in/lucas-costa-5a14a8239</a></p>
+                </div>
+            </section>
         </main>
-        <!--SECTION OF CONTACTS-->
-        <section id="socialMedia">
-            <header>
-                <h2>Mídias Sociais</h2>
-                <p>Você pode me encontrar nas redes abaixo!</p>
-            </header>
-            <div class="contact item">
-                <img src="./src/images/mail-icon.png" alt="email">
-                <p>Email: lucas.costa0117@gmail.com</p>                
-            </div>
-            <div class="contact item">
-                <img src="./src/images/github-icon.png" alt="github">
-                <p><a href="https://github.com/LucasCosta0117">GitHub: github.com/LucasCosta0117</a></p>                
-            </div>
-            <div class="contact item">
-                <img src="./src/images/linkedin-icon.png" alt="linkedin">
-                <p><a href="https://www.linkedin.com/in/lucas-costa-5a14a8239/">Linkedin: linkedin.com/in/lucas-costa-5a14a8239</a></p>
-            </div>
-        </section>
     </body>
 </html>

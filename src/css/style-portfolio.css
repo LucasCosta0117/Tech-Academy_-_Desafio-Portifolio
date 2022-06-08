@@ -12,25 +12,48 @@ html{
     scroll-behavior: smooth;
     background-image: linear-gradient(60deg, black 0%, white 100%);
 }
-
 a{
     text-decoration: none;
 }
 
-.altLang{
-    min-height: 10vh;
-    width: 100%;    
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding: 10px;
-}
+/*INFORMATIONS ==> PRESENTARION*/
 .infoHome{
-    min-height: 90vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*NAVEGATION ==> PRESENTARION*/
+.navMenu{
+    min-height: 20vh;
+    width: 100%;
+    position: fixed;
+    animation: text_review_menu 3s ease-in forwards;
+    animation-delay: 4s;
+    opacity: 0%;
+}
+.navMenu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: black; 
+    font-size: 1.5em;
+    list-style-type: none;
+    border-bottom: solid 1px #FB5607; 
+}
+.navMenu a{
+    color: #FB5607;
+}
+.navMenu a:hover{
+    font-weight:300;
+    color: black;
+    background-color: #FB5607;
+    border-radius: 1px;
+    padding: 15px 100px;
 }
 
 /*SECTION OF PRESENTATION*/
@@ -124,29 +147,6 @@ a{
     z-index: -1;
 }
 
-/*SECTION OF NAVEGATION*/
-#navMenu ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto;
-    padding: 15px 0;
-    background-color: black; 
-    font-size: 1.5em;
-    list-style-type: none;
-    border-bottom: solid 1px #FB5607;
-}
-#navMenu a{
-    color: #FB5607;
-}
-#navMenu a:hover{
-    font-weight:300;
-    color: black;
-    background-color: #FB5607;
-    border-radius: 1px;
-    padding: 15px 100px;
-}
-
 /*SECTION OF PROFILE*/
 #profile{
     flex-direction: column;
@@ -163,7 +163,7 @@ a{
 }
 .profile-section header{    
     font-size: 2.5em;
-    padding-top: 10px;
+    padding: 55px 0;
     color: #FB5607;
     text-shadow: 1px 0.5px black;
 }
@@ -208,7 +208,7 @@ a{
 }
 .profile-section .img{
     flex-basis: 50%;
-    max-height: 450px; /*alterado*/
+    max-height: 300px; /*alterado*/
     overflow: hidden;
     position:relative;
 }
@@ -222,6 +222,14 @@ a{
 }
 
 /*SECTION OF KEYFRAMES PRESENTAION*/
+@keyframes text_review_menu{
+    0%{        
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
 @keyframes text_review_box{
     50%{
         width: 100%;

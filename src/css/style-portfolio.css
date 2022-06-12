@@ -16,7 +16,7 @@ a{
     text-decoration: none;
 }
 
-/*INFORMATIONS ==> PRESENTARION*/
+/*INFORMATIONS ==> PRESENTATION*/
 .infoHome{
     min-height: 100vh;
     width: 100%;
@@ -25,7 +25,7 @@ a{
     justify-content: center;
 }
 
-/*NAVEGATION ==> PRESENTARION*/
+/*NAVEGATION ==> PRESENTAION*/
 .navMenu{
     min-height: 20vh;
     width: 100%;
@@ -33,6 +33,7 @@ a{
     animation: text_review_menu 3s ease-in forwards;
     animation-delay: 4s;
     opacity: 0%;
+    z-index: 2;
 }
 .navMenu ul{
     display: flex;
@@ -102,19 +103,6 @@ a{
 #presentation h1:nth-child(3) span{
     animation-delay: 3s;
 }
-#presentation .altLang .cta2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    margin: 2px;
-    padding: 10px; 
-    color: black;
-    background-color: transparent;
-    border: solid black 1px;
-    font-size: 1rem;
-    font-weight: 300;
-}
 #presentation .infoHome .cta{
     display: inline-block;
     padding: 10px 15px;
@@ -124,11 +112,6 @@ a{
     border: solid #FB5607 2px;
     font-size: 3rem;
     letter-spacing: .2rem;  
-}
-#presentation .altLang .cta2:hover{
-    font-weight: 600;
-    background-color: #f4a261;
-    border: none;
 }
 #presentation .infoHome .cta:hover{
     font-weight: 200;
@@ -155,18 +138,22 @@ a{
     padding: 0px 0;
     background-color: rgb(240, 240, 240);
 }
+
 .profile-section{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 55px; /*Espaço para encaixar barra de navegação*/
 }
+
 .profile-section header{    
     font-size: 2.5em;
-    padding: 55px 0;
+    padding-bottom: 10px;
     color: #FB5607;
     text-shadow: 1px 0.5px black;
 }
+
 .profile-section article{
     display: flex;
     align-items: center;
@@ -178,6 +165,7 @@ a{
     border-radius: 10px;
     background-color: white;
 }
+
 .profile-section .info{
     display: flex;
     align-items: flex-start;
@@ -203,22 +191,71 @@ a{
 .profile-section .info a{
     font-size: 1.3em;
     margin-top: 10px;
-    text-align: justify;
     color: #FB5607;
 }
+
 .profile-section .img{
-    flex-basis: 50%;
-    max-height: 300px; /*alterado*/
+    flex-basis: 50%;   
     overflow: hidden;
-    position:relative;
+    position: relative;
+    width: 100%;
 }
 .profile-section .img img{
-    position: relative;
+    transition: 1.5s ease transform;
+    height: 250px;
+    width: 100%;  
+    object-fit: cover;
+}
+.profile-section article:hover .img img{
+    transform: scale(1.1);
 }
 
-.profile-section article:hover .img{
-    transform: scale(1.1);
-    background-size: cover;
+/*SECTION OF SOCIAL MEDIA*/
+#socialMedia{
+    flex-direction: row;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 0;
+    background-color: rgb(240, 240, 240);
+    margin-top: 50px;
+    padding-bottom: 30px;  
+}
+#socialMedia header h2{
+    display: flex;
+    font-size: 3.5em;
+    padding: 55px 0 0px;
+    justify-content: center;
+    color: #FB5607;
+    text-shadow: 1px 0.5px black;
+}
+#socialMedia header p{
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-shadow: 0.5px 0.5px 1px #FB5607;
+    margin-bottom: 30px;
+}
+#socialMedia .medias ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+#socialMedia .medias img{
+    height: 50px;
+}
+
+/*SECTION OF SOCIAL MEDIA*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    background-color: black;
+    color: wheat;
+    padding: 20px 100px;
 }
 
 /*SECTION OF KEYFRAMES PRESENTAION*/
@@ -250,5 +287,41 @@ a{
     100%{
         color: #FB5607;        
         text-shadow: 1px 1px black;
+    }
+}
+
+/* MEDIA QUERY - RESPONSIVE DEVICES */
+
+@media only screen and (min-width: 780px){
+    .profile-section article{       
+        flex-direction: row;
+        height: 450px;
+        width: 80%;
+        margin: 2px;
+        border-radius: 3px;
+    }
+    .profile-section .info{       
+        height: 100%;
+    }
+    .profile-section .img{       
+        height: 100%;
+     }
+     .profile-section .img img{       
+        height: 100%;
+     }
+     .profile-section article:nth-child(odd){       
+        flex-direction: row-reverse;
+    }
+}
+@media only screen and (max-width: 780px){
+    .navMenu{
+        font-size: 0.8em;
+    }
+    .navMenu a:hover{
+        font-weight:300;
+        color: black;
+        background-color: #FB5607;
+        border-radius: 1px;
+        padding: 15px 3px;
     }
 }

@@ -210,6 +210,12 @@ a{
     transform: scale(1.1);
 }
 
+/*TEXT ADJUSTMENT SECTION OF ABOUT ME*/
+.profile-section .info span{
+    display: flex;
+    text-align: left;
+}
+
 /*SECTION OF SOCIAL MEDIA*/
 #socialMedia{
     flex-direction: row;

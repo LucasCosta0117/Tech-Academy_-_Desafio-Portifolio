@@ -290,8 +290,7 @@ footer{
     }
 }
 
-/* MEDIA QUERY - RESPONSIVE DEVICES */
-
+/* MEDIA QUERY - RESPONSIVE SCREENS */
 @media only screen and (min-width: 780px){
     .profile-section article{       
         flex-direction: row;
@@ -323,5 +322,11 @@ footer{
         background-color: #FB5607;
         border-radius: 1px;
         padding: 15px 3px;
+    }
+}
+/*AJUSTE PARA MOBILE*/
+@media only screen and (max-width: 500px){
+       html{
+        font-size: 7px;
     }
 }
